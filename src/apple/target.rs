@@ -157,6 +157,15 @@ impl<'a> TargetTrait<'a> for Target<'a> {
                     min_xcode_version: Some(((11, 0), "iOS Simulator doesn't support Metal until")),
                 },
             );
+            targets.insert(
+                "Simulator",
+                Target {
+                    triple: "x86_64-apple-ios",
+                    arch: "x86_64",
+                    alias: Some("Simulator"),
+                    min_xcode_version: Some(((11, 0), "iOS Simulator doesn't support Metal until")),
+                },
+            );
             targets
         })
     }

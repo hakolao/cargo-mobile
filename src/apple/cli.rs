@@ -486,6 +486,7 @@ impl Exec for Input {
                         let triple = match arch.as_str() {
                             "arm64" => "aarch64_apple_ios",
                             "x86_64" => "x86_64_apple_ios",
+                            "Simulator" => "aarch64_apple_ios_sim",
                             _ => return Err(Error::ArchInvalid { arch }),
                         };
                         let cflags = format!("CFLAGS_{}", triple);
